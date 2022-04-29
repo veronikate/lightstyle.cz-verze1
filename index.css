@@ -9,13 +9,12 @@ body {
 	font-family: "Roboto", sans-serif;
 	overflow-x: hidden !important;
 	letter-spacing: 1px;
-	background-image: url("images/csm_next1.png");	
+	background-image: url("images/csm_next1.png");
 	background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: scroll;
+	background-position: center top;
+	background-attachment: scroll;
+}
 
-}
-}
 .container-fluid {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
@@ -298,7 +297,7 @@ a {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	align-items: flex-start
+	align-items: flex-start;
 }
 
 .cover_image_wrapper {
@@ -309,7 +308,6 @@ a {
 	background-size: cover;
 	width: 100vw;
 	height: auto;
-
 }
 
 .cover_image {
@@ -569,6 +567,20 @@ a {
 .footer_link:hover {
 	color: #fff;
 }
+
+.footer_phone {
+	background-color: var(--dark2);
+}
+.footer_accordion_item {
+	background-color: var(--dark2);
+}
+.footer_accordion_button {
+	background-color: var(--dark2) !important;
+}
+.footer_accordion_header {
+	background-color: var(--dark2);
+}
+
 .copyright {
 	background-color: var(--dark2);
 	color: #fff;

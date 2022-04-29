@@ -120,3 +120,13 @@ var viewportWidth = $(window).width();
 $(".header_button").click(function () {
 	console.log(viewportWidth);
 });
+
+if (viewportWidth <= 600) {
+	$(".footer").css("display", "none");
+	$(".footer_phone").css("display", "block");
+}
+
+if (viewportWidth >= 600) {
+	$(".footer").css("display", "flex");
+	$(".footer_phone").css("display", "none");
+}
