@@ -130,3 +130,17 @@ if (viewportWidth >= 600) {
 	$(".footer").css("display", "flex");
 	$(".footer_phone").css("display", "none");
 }
+
+var navbar_width = $('.navbar-nav').css('width');
+var navbar_width_int = parseFloat(navbar_width);
+
+var count = (viewportWidth - navbar_width_int) / 2;
+console.log(viewportWidth)
+console.log(navbar_width)
+console.log(count)
+$('.navbar-nav').css('left', count + "px");
+
+
+$('#footer_button_one').click(function() {
+	$('.footer_content').toggleClass('.content_show')
+});
