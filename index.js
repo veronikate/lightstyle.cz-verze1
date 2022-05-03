@@ -13,6 +13,7 @@ $("#kuchyne_link").click(function () {
 	$("#arrow_akce").removeClass("uparrow");
 	$("#arrow_kontakt").removeClass("uparrow");
 	$("#arrow_realizace").removeClass("uparrow");
+	$(".themodal").css("display", "block");
 });
 /*$("#skrine_link").click(function () {
 	$("#arrow_skrine").toggleClass("uparrow");
@@ -41,6 +42,7 @@ $("#showroomy_link").click(function () {
 	$("#arrow_akce").removeClass("uparrow");
 	$("#arrow_kontakt").removeClass("uparrow");
 	$("#arrow_realizace").removeClass("uparrow");
+	$(".themodal").css("display", "block");
 });
 $("#spotrebice_link").click(function () {
 	$("#arrow_spotrebice").toggleClass("uparrow");
@@ -57,6 +59,7 @@ $("#spotrebice_link").click(function () {
 	$("#arrow_akce").removeClass("uparrow");
 	$("#arrow_kontakt").removeClass("uparrow");
 	$("#arrow_realizace").removeClass("uparrow");
+	$(".themodal").css("display", "block");
 });
 $("#akce_link").click(function () {
 	$("#arrow_akce").toggleClass("uparrow");
@@ -73,6 +76,7 @@ $("#akce_link").click(function () {
 	$("#arrow_kuchyne").removeClass("uparrow");
 	$("#arrow_kontakt").removeClass("uparrow");
 	$("#arrow_realizace").removeClass("uparrow");
+	$(".themodal").css("display", "block");
 });
 $("#kontakt_link").click(function () {
 	$("#arrow_kontakt").toggleClass("uparrow");
@@ -88,6 +92,7 @@ $("#kontakt_link").click(function () {
 	$("#arrow_akce").removeClass("uparrow");
 	$("#arrow_kuchyne").removeClass("uparrow");
 	$("#arrow_realizace").removeClass("uparrow");
+	$(".themodal").css("display", "block");
 });
 
 $("#realizace_link").click(function () {
@@ -105,6 +110,7 @@ $("#realizace_link").click(function () {
 	$("#arrow_akce").removeClass("uparrow");
 	$("#arrow_kontakt").removeClass("uparrow");
 	$("#arrow_kuchyne").removeClass("uparrow");
+	$(".themodal").css("display", "block");
 });
 
 $(".openbtn").click(function () {
@@ -130,17 +136,47 @@ if (viewportWidth >= 600) {
 	$(".footer").css("display", "flex");
 	$(".footer_phone").css("display", "none");
 }
+if (viewportWidth <= 600) {
+	$("#cover_title").html(
+		"Zákazník a kvalita naší práce<br> je pro nás na prvním místě"
+	);
+}
 
-var navbar_width = $('.navbar-nav').css('width');
+var navbar_width = $(".navbar-nav").css("width");
 var navbar_width_int = parseFloat(navbar_width);
 
 var count = (viewportWidth - navbar_width_int) / 2;
-console.log(viewportWidth)
-console.log(navbar_width)
-console.log(count)
-$('.navbar-nav').css('left', count + "px");
+console.log(viewportWidth);
+console.log(navbar_width);
+console.log(count);
 
+$(".navbar-nav").css("left", count + "px");
 
-$('#footer_button_one').click(function() {
-	$('.footer_content').toggleClass('.content_show')
+$("#footer_button_one").click(function () {
+	$("#footer_content_one").toggleClass("content_show");
+});
+
+$("#footer_button_two").click(function () {
+	$("#footer_content_two").toggleClass("content_show");
+});
+$("#footer_button_three").click(function () {
+	$("#footer_content_three").toggleClass("content_show");
+});
+
+$(".themodal").click(function () {
+	$(".themodal").css("display", "none");
+
+	$("#realizace_menu_drawer").slideUp();
+	$("#akce_menu_drawer").slideUp();
+	$("#kuchyne_menu_drawer").slideUp();
+	$("#showroomy_menu_drawer").slideUp();
+	$("#spotrebice_menu_drawer").slideUp();
+	$("#skrine_menu_drawer").slideUp();
+	$("#kontakt_menu_drawer").slideUp();
+	$("#arrow_realizace").removeClass("uparrow");
+	$("#arrow_showroomy").removeClass("uparrow");
+	$("#arrow_spotrebice").removeClass("uparrow");
+	$("#arrow_akce").removeClass("uparrow");
+	$("#arrow_kontakt").removeClass("uparrow");
+	$("#arrow_kuchyne").removeClass("uparrow");
 });
